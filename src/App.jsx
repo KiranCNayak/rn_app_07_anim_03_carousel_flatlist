@@ -9,9 +9,11 @@ import {
   View,
 } from 'react-native';
 
-import { CAROUSEL_IMAGES } from './src/data/constants/IMAGES';
-import leftArrow from './src/static/images/left.png';
-import rightArrow from './src/static/images/right.png';
+import { NavigationContainer } from '@react-navigation/native';
+
+import { CAROUSEL_IMAGES } from './data/constants/IMAGES';
+import leftArrow from './static/images/left.png';
+import rightArrow from './static/images/right.png';
 
 const { height, width } = Dimensions.get('window');
 const imageWidth = width * 0.75;
@@ -102,7 +104,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <NavigationContainer>
       <StatusBar hidden />
       <View style={[StyleSheet.absoluteFillObject]}>
         {CAROUSEL_IMAGES.map(renderBackgroundImage)}
@@ -143,7 +145,7 @@ const App = () => {
           </Animated.View>
         </View>
       </View>
-    </>
+    </NavigationContainer>
   );
 };
 

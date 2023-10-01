@@ -11,6 +11,7 @@
   "dependencies": {
     "@faker-js/faker": "^8.1.0",
     "@react-navigation/native": "^6.1.8",
+    "@react-navigation/native-stack": "^6.9.14",
     "moti": "^0.26.0",
     "react": "18.2.0",
     "react-native": "0.72.5",
