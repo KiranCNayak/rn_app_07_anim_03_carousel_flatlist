@@ -7,10 +7,18 @@ const HomeView = ({ navigation }) => {
       <TouchableOpacity
         activeOpacity={0.6}
         onPress={() => {
-          navigation.navigate('CarouselWithTouchableNav');
+          navigation.navigate('CarouselWithTouchableNavigationView');
         }}
         style={styles.touchableStyle}>
         <Text style={styles.textStyle}>Carousel With Bottom Navigation</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.6}
+        onPress={() => {
+          navigation.navigate('ScrollPaginatedView');
+        }}
+        style={styles.touchableStyle}>
+        <Text style={styles.textStyle}>Scroll Paginated View</Text>
       </TouchableOpacity>
     </View>
   );
@@ -35,6 +43,7 @@ const styles = StyleSheet.create({
   touchableStyle: {
     backgroundColor: '#d33192',
     borderRadius: 24,
+    marginVertical: 8,
     paddingHorizontal: 16,
     paddingVertical: 12,
   },

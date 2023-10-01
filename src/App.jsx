@@ -1,11 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import CarouselWithTouchableNav from './views/CarouselWithTouchableNavigationView';
+import CarouselWithTouchableNavigationView from './views/CarouselWithTouchableNavigationView';
 import HomeView from './views/HomeView';
+import ScrollPaginatedView from './views/ScrollPaginatedView';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,14 +29,18 @@ const App = () => {
           }}
         />
         <Stack.Screen
-          name="CarouselWithTouchableNav"
-          component={CarouselWithTouchableNav}
+          component={CarouselWithTouchableNavigationView}
+          name="CarouselWithTouchableNavigationView"
           options={{
             title: 'Overview',
             headerShown: false,
           }}
         />
-        {/* <Stack.Screen name="Details" component={DetailsScreen} /> */}
+        <Stack.Screen
+          component={ScrollPaginatedView}
+          name="ScrollPaginatedView"
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
