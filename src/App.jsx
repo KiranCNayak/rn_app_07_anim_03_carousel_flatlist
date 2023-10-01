@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CarouselWithTouchableNavigationView from './views/CarouselWithTouchableNavigationView';
 import HomeView from './views/HomeView';
 import ScrollPaginatedView from './views/ScrollPaginatedView';
+import CountdownTimerView from './views/CountdownTimerView';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,11 @@ const App = () => {
           component={ScrollPaginatedView}
           name="ScrollPaginatedView"
           options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          component={CountdownTimerView}
+          name="CountdownTimerView"
+          options={{ headerShown: false, navigationBarHidden: true }}
         />
       </Stack.Navigator>
     </NavigationContainer>

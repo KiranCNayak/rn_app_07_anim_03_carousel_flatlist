@@ -1,25 +1,41 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 
 const HomeView = ({ navigation }) => {
   return (
     <View style={styles.rootContainerStyle}>
-      <TouchableOpacity
-        activeOpacity={0.6}
-        onPress={() => {
-          navigation.navigate('CarouselWithTouchableNavigationView');
-        }}
-        style={styles.touchableStyle}>
-        <Text style={styles.textStyle}>Carousel With Bottom Navigation</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        activeOpacity={0.6}
-        onPress={() => {
-          navigation.navigate('ScrollPaginatedView');
-        }}
-        style={styles.touchableStyle}>
-        <Text style={styles.textStyle}>Scroll Paginated View</Text>
-      </TouchableOpacity>
+      <ScrollView>
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={() => {
+            navigation.navigate('CarouselWithTouchableNavigationView');
+          }}
+          style={styles.touchableStyle}>
+          <Text style={styles.textStyle}>Carousel With Bottom Navigation</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={() => {
+            navigation.navigate('ScrollPaginatedView');
+          }}
+          style={styles.touchableStyle}>
+          <Text style={styles.textStyle}>Scroll Paginated View</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={() => {
+            navigation.navigate('CountdownTimerView');
+          }}
+          style={styles.touchableStyle}>
+          <Text style={styles.textStyle}>Countdown Timer View</Text>
+        </TouchableOpacity>
+      </ScrollView>
     </View>
   );
 };
@@ -41,6 +57,7 @@ const styles = StyleSheet.create({
   },
 
   touchableStyle: {
+    alignItems: 'center',
     backgroundColor: '#d33192',
     borderRadius: 24,
     marginVertical: 8,
